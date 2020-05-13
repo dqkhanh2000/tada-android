@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.sict.mobile.tada.ui.home.HomeFragment"
+        android:label="home_fragment"
+        tools:layout="@layout/home_fragment" >
+        <action
+            android:id="@+id/action_nav_home_to_product"
+            app:destination="@id/product_fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_category"
+        android:name="com.sict.mobile.tada.ui.category.CategoryFragment"
+        android:label="category_fragment"
+        tools:layout="@layout/category_fragment" >
+        <action
+            android:id="@+id/action_nav_category_to_colectionFragment"
+            app:destination="@id/colectionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_cart"
+        android:name="com.sict.mobile.tada.ui.cart.CartFragment"
+        android:label="cart_fragment"
+        tools:layout="@layout/cart_fragment" />
+    <fragment
+        android:id="@+id/nav_profile"
+        android:name="com.sict.mobile.tada.ui.profile.ProfileFragment"
+        android:label="profile_fragment"
+        tools:layout="@layout/profile_fragment" />
+    <fragment
+        android:id="@+id/colectionFragment"
+        android:name="com.sict.mobile.tada.ui.colection.ColectionFragment"
+        android:label="colection_fragment"
+        tools:layout="@layout/colection_fragment" >
+        <action
+            android:id="@+id/action_colectionFragment_to_product"
+            app:destination="@id/product_fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/product_fragment"
+        android:name="com.sict.mobile.tada.ui.product.Product"
+        android:label="product_fragment"
+        tools:layout="@layout/product_fragment" />
+
+</navigation>
